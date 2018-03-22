@@ -73,6 +73,35 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "localhost:8080/payments/9/0",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\":\"hallo ballo knaller\",\"value\":500}"
+				},
+				"url": {
+					"raw": "localhost:8080/payments/9/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payments",
+						"9",
+						"0"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

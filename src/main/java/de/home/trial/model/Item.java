@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class Item {
 
-      Long id;
-      Long contractId;
-      String description;
-      Long value;
-      Date time;
-      Boolean isImported;
-      Date createdAt;
-      Date updateAt;
-      Boolean isDeleted;
+      private Long id;
+      private Long contractId;
+      private String description;
+      private Long value;
+      private Date time;
+      private Boolean isImported;
+      private Date createdAt;
+      private Date updateAt;
+      private Boolean isDeleted;
 
       public Item(Long id, Long contractId, String description, Long value, Date time, Boolean isImported,
                   Date createdAt, Date updateAt, Boolean isDeleted) {

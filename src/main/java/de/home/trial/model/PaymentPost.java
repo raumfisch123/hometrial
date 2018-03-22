@@ -2,9 +2,9 @@ package de.home.trial.model;
 
 public class PaymentPost {
 
-    Long contractId;
-    String description;
-    Long value;
+    private Long contractId;
+    private String description;
+    private Long value;
 
     public PaymentPost(Long contractId, String description, Long value) {
         this.contractId = contractId;
