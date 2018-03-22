@@ -45,10 +45,7 @@ public class PaymentService {
         Date currentDate = new Date();
         Item item = new Item(getNewItemId(), contractId, paymentPost.getDescription(), paymentPost.getValue(),
                 currentDate, false, currentDate, currentDate, false);
-
-        if (payments.get(contractId) == null)
-            payments.put(contractId, new ArrayList<>());
-
+        payments.computeIfAbsent(contractId, k -> new ArrayList<>());
         payments.get(contractId).add(item);
     }
 
