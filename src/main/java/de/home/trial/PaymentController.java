@@ -40,5 +40,11 @@ public class PaymentController {
         return paymentService.getPayment(contractId, null, null);
     }
 
+    @PatchMapping("payments/{contractId}/{id}")
+    public Payment item(@PathVariable("contractId") long contractId, @PathVariable("id") long id, @RequestBody PaymentPost paymentPost) {
+        paymentService.updatePayment(contractId, id, paymentPost);
+        return paymentService.getPayment(contractId, null, null);
+    }
+
 
 }

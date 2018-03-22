@@ -67,6 +67,18 @@ public class Item {
             isDeleted = deleted;
       }
 
+      public void setDescription(String description) {
+            this.description = description;
+      }
+
+      public void setValue(Long value) {
+            this.value = value;
+      }
+
+      public void setUpdateAt(Date updateAt) {
+            this.updateAt = updateAt;
+      }
+
       @Override
       public String toString() {
             return "Item{" +

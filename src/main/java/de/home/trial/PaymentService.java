@@ -24,8 +24,15 @@ public class PaymentService {
         return new Payment(items);
     }
 
-    public void updatePayment(Long contractId, Long itemId){
+    public void updatePayment(Long contractId, Long itemId, PaymentPost paymentPost){
+        Optional<Item> item = payments.get(contractId)
+                .stream().filter(item1 -> item1.getId().equals(itemId)).findFirst();
 
+        if(item.isPresent()){
+            item.get().setValue(paymentPost.getValue());
+            item.get().setDescription(paymentPost.getDescription());
+            item.get().setUpdateAt(new Date());
+        }
     }
 
     public void removePayment(Long contractId, Long itemId) {
