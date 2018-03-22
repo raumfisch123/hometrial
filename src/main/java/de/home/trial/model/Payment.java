@@ -22,4 +22,11 @@ public class Payment {
             this.sum = this.items.stream().filter(item -> !item.getDeleted()).map(item -> item.value).reduce(Long::sum).get();
     }
 
+    public Long getSum() {
+        return sum;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
 }
