@@ -19,7 +19,7 @@ public class Payment {
             this.items = items;
 
         if (this.items.size() > 0 )
-            this.sum = this.items.stream().filter(item -> !item.getDeleted()).map(item -> item.value).reduce(Long::sum).get();
+            this.sum = this.items.stream().filter(item -> !item.getDeleted()).map(item -> item.value).reduce(Long::sum).orElse(0L);
     }
 
     public Long getSum() {
